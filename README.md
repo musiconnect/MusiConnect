@@ -1,7 +1,7 @@
 # MusiConnect
 - The Main Repository for MusiConnect
 
-# What yo need to download (most likely already have downloaded)
+# What you need to download (most likely already have downloaded)
 - download nodejs form nodejs.org
 ```
 sudo npm install -g

@@ -1,25 +1,65 @@
 header {
     display: block;
-    background-color: black;
+    background-color: lightgrey;
     width: 100%;
     height: 50px;
     color: white;
+    border: 5px;
+    border-color: lightgrey;
+    border-radius: 5px;
   }
   
   #headerButtons {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 8px;
   }
   
   .navButton {
-    float: right;
+    float: left;
+    text-align: center;
+    padding: 8px 8px;
   }
-  
-  footer {
+  a:link, a:visited{
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    padding: 8px 8px;
+    border: 5px;
+    border-color: grey;
+    border-radius: 5px;
+    font-family: Verdana, sans-serif;
+  }
+  a:hover, a:active {
+    background-color: black;
+  }
+
+footer {
     display: block;
     width: 100%;
     height: 50px;
     background-color: black;
     color: white;
+  }
+
+/* Sign In Button Styles */
+
+.g-signin2{
+    float: right;
+    padding: 8px;
+}
+/* Logo Styles */
+.logo-container {
+    width: 250px;
+    height: 50px;
+    padding: 5px;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 5px;
+    background-color: lightgrey;
+  }
+  img {
+    width: 250px;
+    height: auto;
+    border: 50px;
   }

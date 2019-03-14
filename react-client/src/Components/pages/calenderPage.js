@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CalederPage extends Component {
+class CalenderPage extends Component {
   render() {
     return (
       <div>
