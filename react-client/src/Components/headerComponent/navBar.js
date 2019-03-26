@@ -10,7 +10,7 @@ class NavBar extends Component {
         <div classname="nav-container">
             <ul id="headerButtons">
               <li className="navButton"><Link to="/HomePage/">HOME</Link></li>
-              <li className="navButton"><Link to="/CalenderPage/">CALENDER</Link></li>
+              <li className="navButton"><Link to="/CalenderPage/">CALENDAR</Link></li>
             </ul>
         </div>
         

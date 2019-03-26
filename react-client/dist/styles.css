@@ -72,3 +72,8 @@ footer {
     height: auto;
     border: 50px;
   }
+
+.pageBody{
+	top:60px;
+	  position:relative;
+  }
