@@ -1,74 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+/*Seperating screen into 3 sections*/
+.column {
+  float: Left;
+  padding: 5px;
+  position: relative;
+  top: 60px;
+}
+.column.side{
+  width: 20%;
+}
+.column.middle{
+  width: 60%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/*Main Heading Style*/
 header {
-    display: block;
-    background-color: lightgrey;
-    width: 100%;
-    height: 50px;
-    color: white;
-    border: 5px;
-    border-color: lightgrey;
-    border-radius: 5px;
-    position: fixed;
-  }
-  
-  #headerButtons {
-    list-style-type: none;
-    margin: 0;
-    padding: 8px;
-  }
-  
-  .nav-container{
-    width: 250px;
-    height: 50px;
-    padding: 5px;
-    float: right;
-  }
+  display: block;
+  background-color: lightgrey;
+  width: 100%;
+  height: 50px;
+  color: white;
+  border: 5px;
+  border-color: lightgrey;
+  border-radius: 5px;
+  position: fixed;
+}
 
-  .navButton {
-    float: right;
-    text-align: center;
-    padding: 8px 8px;
-  }
-  a:link, a:visited{
-    background-color: grey;
-    color: white;
-    text-decoration: none;
-    padding: 8px 8px;
-    border: 5px;
-    border-color: grey;
-    border-radius: 5px;
-    font-family: Verdana, sans-serif;
-  }
-  a:hover, a:active {
-    background-color: black;
-  }
+/*NavBar Styles*/
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+  top: 3px;
+}
 
+li {
+  float: right;
+  border-right:1px solid black;
+  font-family: verdana;
+}
+
+li:last-child {
+  border-left: none;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: grey;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: grey;
+}
+
+li a:visited {
+color: white
+}
+
+/*Footer Style*/
 footer {
-    display: block;
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    color: white;
-  }
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+}
 
 /* Sign In Button Styles */
-
 .g-signin2{
-    float: right;
-    padding: 55px 0px;
+  float:right;
+  padding: 55px 0px;
+  position: fixed;
+  right: 5px;
 }
+
 /* Logo Styles */
 .logo-container {
-    width: 250px;
-    height: 50px;
-    padding: 5px;
-    margin-top: 0px;
-    margin-left: 0px;
-    border-radius: 5px;
-    background-color: lightgrey;
-    position: fixed;
-  }
-  img {
-    width: 250px;
-    height: auto;
-    border: 50px;
+  width: 260px;
+  height: 60px;
+  padding: 5px;
+  margin-top: 0px;
+  margin-left: 0px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  position: fixed;
+}
+
+/*Specific Image Style*/
+img {
+  width: 250px;
+  height: auto;
+  border: 50px;
+}
+
+/*Calendar Page Body Style*/
+.pageBody{
+	top:60px;
+	  position:relative;
   }
