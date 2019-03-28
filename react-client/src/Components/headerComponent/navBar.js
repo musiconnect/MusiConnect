@@ -4,18 +4,19 @@ class NavBar extends Component {
   render() {
     return (
   <html>
-      <header>
-        <div className="logo-container">
+      <body>
+
+        <div class="header">
             <img src="../images/Logo.png" alt="Musiconnect Logo"/>
         </div>
-      </header>
-      <body>
-        <div>
-            <ul>
-              <li><Link to="/chatPage/">CHAT</Link></li>
-              <li><Link to="/calenderPage/">CALENDER</Link></li>
-              <li><Link to="/homePage/">HOME</Link></li>
-            </ul>
+ 
+        <div class="topnav">
+          <a><Link to="/homePage/">HOME</Link></a>
+          <a><Link to="/calenderPage/">CALENDER</Link></a>
+          <a><Link to="/chatPage/">CHAT</Link></a>
+          <a><Link to="/videoPage/">VIDEOS</Link></a>
+          <a><Link to="/liveStreamPage/">LIVESTREAM</Link></a>
+          
         </div>
       </body>
     </html>

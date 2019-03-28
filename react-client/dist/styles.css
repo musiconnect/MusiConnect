@@ -5,12 +5,54 @@
 body {
   margin: 0;
 }
+
+/*Main Heading Style*/
+.header {
+  display: block;
+  background-color: lightgrey;
+  width: 100%;
+  height: 52px;
+  color: white;
+  border: 5px;
+  border-color: lightgrey;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 1;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  z-index: 2;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  font-family: verdana;
+  padding: 8px 4px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 /*Seperating screen into 3 sections*/
 .column {
   float: Left;
   padding: 5px;
   position: relative;
-  top: 60px;
+  top: 100px;
 }
 .column.side{
   width: 20%;
@@ -25,27 +67,14 @@ body {
   clear: both;
 }
 
+/*Changes layout depending on site size*/
 @media screen and (max-width: 600px) {
   .column.side, .column.middle {
     width: 100%;
   }
 }
-
-/*Main Heading Style*/
-header {
-  display: block;
-  background-color: lightgrey;
-  width: 100%;
-  height: 50px;
-  color: white;
-  border: 5px;
-  border-color: lightgrey;
-  border-radius: 5px;
-  position: fixed;
-  z-index: 1;
-}
-
-/*NavBar Styles*/
+/*
+NavBar Styles
 ul {
   list-style-type: none;
   margin: 0px;
@@ -53,7 +82,7 @@ ul {
   position: fixed;
   width: 100%;
   top: 3px;
-  z-index: 2;
+  z-index: 3;
 }
 
 li {
@@ -73,13 +102,18 @@ li a {
   text-decoration: none;
 }
 
+li a:link {
+  color: white;
+}
 li a:hover {
+  color: darkgrey;
   background-color: grey;
 }
 
 li a:visited {
 color: white
 }
+*/
 
 /*Footer Style*/
 footer {
@@ -88,6 +122,9 @@ footer {
   height: 50px;
   background-color: black;
   color: white;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
 }
 
 /* Sign In Button Styles */

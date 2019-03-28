@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { browserHistory } from 'react-router';
+import Header from './headerComponent/header';
 import NavBar from './HeaderComponent/NavBar';
 import HomePage from './pages/HomePage';
 import CalenderPage from './pages/calenderPage';
+import ChatPage from './pages/chatPage';
+import VideoPage from './pages/videoPage';
+import LiveStreamPage from './pages/liveStreamPage';
+import Footer from './footerComponenet/footer';
 //import id_token from google.oauth2
 
 class App extends Component {
@@ -12,9 +17,14 @@ class App extends Component {
       <Router>
         <div>
             <div>
+                <Header />
                 <NavBar />
-                <Route name="home" path="/homePage" component={HomePage} />
-                <Route name="calender" path="/calenderPage" component={CalenderPage} />
+                <Route name="home" path="/homePage/" component={HomePage} />
+                <Route name="calender" path="/calenderPage/" component={CalenderPage} />
+                <Route name="chat" path="/chatPage/" component={ChatPage} />
+                <Route name="videos" path="/videoPage/" component={VideoPage} />
+                <Route name="livestream" path="/liveStreamPage/" component={LiveStreamPage} />
+                <Footer />
             </div>
         </div>
       </Router>
