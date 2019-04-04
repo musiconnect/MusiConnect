@@ -4,7 +4,7 @@ import { browserHistory } from 'react-router';
 import Header from './headerComponent/header';
 import NavBar from './HeaderComponent/NavBar';
 import HomePage from './pages/HomePage';
-import CalenderPage from './pages/calenderPage';
+import CalendarPage from './pages/calendarPage';
 import ChatPage from './pages/chatPage';
 import VideoPage from './pages/videoPage';
 import LiveStreamPage from './pages/liveStreamPage';
@@ -19,11 +19,11 @@ class App extends Component {
             <div>
                 <Header />
                 <NavBar />
-                <Route name="home" path="/homePage/" component={HomePage} />
-                <Route name="calender" path="/calenderPage/" component={CalenderPage} />
-                <Route name="chat" path="/chatPage/" component={ChatPage} />
-                <Route name="videos" path="/videoPage/" component={VideoPage} />
-                <Route name="livestream" path="/liveStreamPage/" component={LiveStreamPage} />
+                  <Route name="home" path="/homePage/" component={HomePage} />
+                  <Route name="calendar" path="/calendarPage/" component={CalendarPage} />
+                  <Route name="chat" path="/chatPage/" component={ChatPage} />
+                  <Route name="videos" path="/videoPage/" component={VideoPage} />
+                  <Route name="livestream" path="/liveStreamPage/" component={LiveStreamPage} />
                 <Footer />
             </div>
         </div>

@@ -12,7 +12,7 @@ class NavBar extends Component {
  
         <div class="topnav">
           <a><Link to="/homePage/">HOME</Link></a>
-          <a><Link to="/calenderPage/">CALENDER</Link></a>
+          <a><Link to="/calendarPage/">CALENDAR</Link></a>
           <a><Link to="/chatPage/">CHAT</Link></a>
           <a><Link to="/videoPage/">VIDEOS</Link></a>
           <a><Link to="/liveStreamPage/">LIVESTREAM</Link></a>

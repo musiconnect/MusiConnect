@@ -6,27 +6,35 @@ body {
   margin: 0;
 }
 
-/*Main Heading Style*/
+/***************** Main Heading Style *****************/
 .header {
   display: block;
-  background-color: lightgrey;
+  background-color: grey;
   width: 100%;
-  height: 52px;
-  color: white;
-  border: 5px;
-  border-color: lightgrey;
-  border-radius: 5px;
+  height: 60px;
   position: fixed;
   z-index: 1;
 }
 
-/* Style the top navigation bar */
+.header img {
+  width: 250px;
+  height: auto;
+  border: 50px;
+  margin: 5px;
+}
+
+
+
+
+
+/***************** Style the top navigation bar *****************/
 .topnav {
   overflow: hidden;
   background-color: #333;
   width: 100%;
   position: fixed;
-  top: 50px;
+  top: 60px;
+  border: 1px solid black;
   z-index: 2;
 }
 
@@ -39,6 +47,8 @@ body {
   font-family: verdana;
   padding: 8px 4px;
   text-decoration: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
 /* Change color on hover */
@@ -47,12 +57,16 @@ body {
   color: black;
 }
 
-/*Seperating screen into 3 sections*/
+
+
+
+
+/***************** Seperating screen into 3 sections *****************/
 .column {
   float: Left;
   padding: 5px;
   position: relative;
-  top: 100px;
+  top: 120px;
 }
 .column.side{
   width: 20%;
@@ -68,11 +82,53 @@ body {
 }
 
 /*Changes layout depending on site size*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .column.side, .column.middle {
     width: 100%;
   }
 }
+
+/***************** Footer Styl e*****************/
+footer {
+  display: block;
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+}
+
+.footer img {
+  width: 50px;
+  height: auto;
+  margin: 5px;
+  
+}
+.footer p {
+  font-family: verdana;
+}
+/***************** Sign In Button Styles *****************/
+.g-signin2{
+  float:right;
+  padding: 55px 0px;
+  position: fixed;
+  right: 5px;
+  z-index: 3;
+  top: 12px;
+}
+
+/***************** Calendar Page Body Style *****************/
+.pageBody{
+  top:60px;
+	position:relative;
+}
+
+
+
+
+
 /*
 NavBar Styles
 ul {
@@ -115,48 +171,3 @@ color: white
 }
 */
 
-/*Footer Style*/
-footer {
-  display: block;
-  width: 100%;
-  height: 50px;
-  background-color: black;
-  color: white;
-  position: fixed;
-  bottom: 0px;
-  text-align: center;
-}
-
-/* Sign In Button Styles */
-.g-signin2{
-  float:right;
-  padding: 55px 0px;
-  position: fixed;
-  right: 5px;
-  z-index: 3;
-}
-
-/* Logo Styles */
-.logo-container {
-  width: 260px;
-  height: 60px;
-  padding: 5px;
-  margin-top: 0px;
-  margin-left: 0px;
-  border-radius: 5px;
-  background-color: lightgrey;
-  position: fixed;
-}
-
-/*Specific Image Style*/
-img {
-  width: 250px;
-  height: auto;
-  border: 50px;
-}
-
-/*Calendar Page Body Style*/
-.pageBody{
-	top:60px;
-	  position:relative;
-  }
