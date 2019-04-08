@@ -126,6 +126,59 @@ footer {
 }
 
 
+/* chatt page style */
+.chatapp{
+    display: grid; /* this creates a grid for each component of the chat app to be placed, pretty cool */
+    height: 100%;
+    grid-template-columns:repeat(6,1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+    grid-template-areas:
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "s f f f f f";
+}
+
+.message-list{
+    grid-area: m; /* each one of the components is designated an area on the grid */
+    background-color: aqua; /* coloring to help see the component */
+}
+
+.new-room{
+    grid-area: s;
+    background-color: red;
+}
+
+.send-message{
+    grid-area:f;
+    background-color: aquamarine;
+    width: 100%;
+   
+}
+
+.room-list{
+    grid-area:r;
+    background-color: yellow;
+}
+
+.message {
+    background-color: greenyellow;
+    border: 1px solid green;
+    border-radius: 3px;
+    width: float;
+    text-align: left;
+    padding: 10px;
+    
+    
+}
+
+.messageID{
+    color: black; 
+}
+
+/* end of chat page style */ 
 
 
 
