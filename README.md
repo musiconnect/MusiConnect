@@ -19,4 +19,4 @@ npm run server-dev
 # How to install chatkit 
 ```
 npm install @pusher/chatkit-client
-
+```
