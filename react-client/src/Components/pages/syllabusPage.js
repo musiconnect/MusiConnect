@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class HomePage extends Component {
+class SyllabusPage extends Component {
   render() {
     return (
       <div class="row">
@@ -11,10 +11,8 @@ class HomePage extends Component {
         </div>
 
         <div class="column middle">
-          <div class="homeLogo">
-            <img src="../images/Logo.png" alt="Musiconnect Logo"/>
-          </div>
-          <h3>Welcome to the new hub of communictaion for the Kent State choir department.</h3>
+          <h1>Syllabus Page</h1>
+          <h3>Here you will be able to access the choir departments syllabus</h3>
         </div>
 
         <div class="column side">
@@ -26,4 +24,4 @@ class HomePage extends Component {
     )
   }
 }
-export default HomePage;
+export default SyllabusPage;

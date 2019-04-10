@@ -1,9 +1,19 @@
+/***************** Basic layout Styles *****************/
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+}
+
+.centerAlign {
+  text-align: center;
+}
+
+.homeLogo {
+  width: 200px;
+  height: auto;
 }
 
 /***************** Main Heading Style *****************/
@@ -67,9 +77,14 @@ body {
   padding: 5px;
   position: relative;
   top: 120px;
+  font-family: verdana;
+  bottom: 1000px;
 }
 .column.side{
   width: 20%;
+  border: 2px;
+  border-radius: 2px;
+  border-color: grey;
 }
 .column.middle{
   width: 60%;
@@ -88,7 +103,7 @@ body {
   }
 }
 
-/***************** Footer Styl e*****************/
+/***************** Footer Style *****************/
 footer {
   display: block;
   width: 100%;
@@ -126,6 +141,64 @@ footer {
 }
 
 
+/***************** Chat Page Body Style *****************/
+.pageBody{
+  top: 60px;
+  position: relative;
+}
+
+.chatapp{
+  display: grid; /* this creates a grid for each component of the chat app to be placed, pretty cool */
+  height: 100%;
+  width: 100%;
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas:
+      "r m m m m m"
+      "r m m m m m"
+      "r m m m m m"
+      "r m m m m m"
+      "r m m m m m"
+      "s f f f f f";
+}
+
+.message-list{
+  grid-area: m; /* each one of the components is designated an area on the grid */
+  background-color: aqua; /* coloring to help see the component */
+}
+
+.new-room{
+  grid-area: s;
+  background-color: red;
+}
+
+.send-message{
+  grid-area:f;
+  background-color: aquamarine;
+  width: 100%;
+ 
+}
+
+.room-list{
+  grid-area:r;
+  background-color: yellow;
+}
+
+.message {
+  background-color: greenyellow;
+  border: 1px solid green;
+  border-radius: 3px;
+  width: float;
+  text-align: left;
+  padding: 10px;
+  font-family: verdana;
+  
+}
+
+.messageID{
+  color: black;
+}
+
 
 
 
@@ -140,24 +213,20 @@ ul {
   top: 3px;
   z-index: 3;
 }
-
 li {
   float: right;
   border-right:1px solid black;
   font-family: verdana;
 }
-
 li:last-child {
   border-left: none;
 }
-
 li a {
   display: block;
   padding: 8px;
   background-color: grey;
   text-decoration: none;
 }
-
 li a:link {
   color: white;
 }
@@ -165,9 +234,7 @@ li a:hover {
   color: darkgrey;
   background-color: grey;
 }
-
 li a:visited {
 color: white
 }
 */
-

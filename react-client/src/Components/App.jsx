@@ -8,8 +8,8 @@ import CalendarPage from './pages/calendarPage';
 import ChatPage from './pages/chatPage';
 import VideoPage from './pages/videoPage';
 import LiveStreamPage from './pages/liveStreamPage';
-import Footer from './footerComponenet/footer';
-
+import SyllabusPage from './pages/syllabusPage';
+import Footer from './footerComponent/footer';
 //import id_token from google.oauth2
 
 class App extends Component {
@@ -25,6 +25,7 @@ class App extends Component {
                   <Route name="chat" path="/chatPage/" component={ChatPage} />
                   <Route name="videos" path="/videoPage/" component={VideoPage} />
                   <Route name="livestream" path="/liveStreamPage/" component={LiveStreamPage} />
+                  <Route name="Syllabus" path="/syllabusPage" component={SyllabusPage} />
                 <Footer />
             </div>
         </div>

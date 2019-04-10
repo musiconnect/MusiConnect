@@ -16,6 +16,7 @@ class NavBar extends Component {
           <a><Link to="/chatPage/">CHAT</Link></a>
           <a><Link to="/videoPage/">VIDEOS</Link></a>
           <a><Link to="/liveStreamPage/">LIVESTREAM</Link></a>
+          <a><Link to="/syllabusPage/">SYLLABUS</Link></a>
           
         </div>
       </body>
