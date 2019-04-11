@@ -9,10 +9,14 @@ body {
 
 .centerAlign {
   text-align: center;
+  background: grey;
+  border: grey;
+  border-radius: 5px;
+  width: 50%;
 }
 
 .homeLogo {
-  width: 200px;
+  width: 50px;
   height: auto;
 }
 
@@ -67,10 +71,6 @@ body {
   color: black;
 }
 
-
-
-
-
 /***************** Seperating screen into 3 sections *****************/
 .column {
   float: Left;
@@ -97,9 +97,13 @@ body {
 }
 
 /*Changes layout depending on site size*/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
   .column.side, .column.middle {
     width: 100%;
+  }
+  .topnav a {float: none;}
+  .column {
+    top: 350px;
   }
 }
 
@@ -164,7 +168,10 @@ footer {
 
 .message-list{
   grid-area: m; /* each one of the components is designated an area on the grid */
-  background-color: aqua; /* coloring to help see the component */
+  background-color: white; /* coloring to help see the component */
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 20px;
 }
 
 .new-room{
@@ -174,9 +181,11 @@ footer {
 
 .send-message{
   grid-area:f;
-  background-color: aquamarine;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 50px;
   width: 100%;
- 
+  padding: 20px;
 }
 
 .room-list{
@@ -185,13 +194,14 @@ footer {
 }
 
 .message {
-  background-color: greenyellow;
-  border: 1px solid green;
-  border-radius: 3px;
-  width: float;
+  background-color: deepskyblue;
+  border: 1px solid dodgerblue;
+  border-radius: 25px;
+  width: 60%;
   text-align: left;
   padding: 10px;
   font-family: verdana;
+  margin-left: 50px;
   
 }
 
