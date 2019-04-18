@@ -33,6 +33,7 @@ class SendMessage extends Component {
                 onSubmit={this.handleSubmit} // send the message on submit
                 className= "send-message"> 
             <input 
+            disabled={this.props.disabled}
                 onChange={this.handleChange} // as the text is changing, change the message 
                 value={this.state.message} // a place holder of the input
                 placeholder="Type Here" type="text" />

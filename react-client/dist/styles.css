@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
-body {
+html,body {
+    height:100%;
   margin: 0;
+    padding :0;
+    font-family: system-ui;
+    font-weight: 200;
 }
 
 /***************** Main Heading Style *****************/
@@ -109,6 +113,7 @@ footer {
 .footer p {
   font-family: verdana;
 }
+
 /***************** Sign In Button Styles *****************/
 .g-signin2{
   float:right;
@@ -118,7 +123,16 @@ footer {
   z-index: 3;
   top: 12px;
 }
-
+/*Changes layout depending on site size*/
+@media screen and (max-width: 700px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+  .topnav a {float: none;}
+  .column {
+    top: 350px;
+  }
+}
 /***************** Calendar Page Body Style *****************/
 .pageBody{
   top:60px;
@@ -127,55 +141,74 @@ footer {
 
 
 /* chatt page style */
+.pageBody{
+  top: 60px;
+  position: relative;
+}
+
 .chatapp{
-    display: grid; /* this creates a grid for each component of the chat app to be placed, pretty cool */
-    height: 100%;
-    grid-template-columns:repeat(6,1fr);
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 60px;
-    grid-template-areas:
-        "r m m m m m"
-        "r m m m m m"
-        "r m m m m m"
-        "r m m m m m"
-        "r m m m m m"
-        "s f f f f f";
+  display: grid; /* this creates a grid for each component of the chat app to be placed, pretty cool */
+  height: 100%;
+  width: 100%;
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas:
+      "r m m m m s"
+      "r m m m m n"
+      "r m m m m n"
+      "r m m m m n"
+      "r m m m m n"
+      "r f f f f n";
 }
 
 .message-list{
-    grid-area: m; /* each one of the components is designated an area on the grid */
-    background-color: aqua; /* coloring to help see the component */
+  grid-area: m; /* each one of the components is designated an area on the grid */
+  background-color: white; /* coloring to help see the component */
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 20px;
+
+     overflow: scroll;
+    max-height: 100%;
 }
 
 .new-room{
-    grid-area: s;
-    background-color: red;
+  grid-area: s;
+ 
 }
 
 .send-message{
-    grid-area:f;
-    background-color: aquamarine;
-    width: 100%;
-   
+  grid-area:f;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 50px;
+  width: 100%;
+  padding: 20px;
 }
 
 .room-list{
-    grid-area:r;
-    background-color: yellow;
+  grid-area:r;
+}
+
+
+.roomactive{
+    color: red;
 }
 
 .message {
-    background-color: greenyellow;
-    border: 1px solid green;
-    border-radius: 3px;
-    width: float;
-    text-align: left;
-    padding: 10px;
-    
-    
+  background-color: deepskyblue;
+  border: 1px solid dodgerblue;
+  border-radius: 25px;
+  width: 60%;
+  text-align: left;
+  padding: 10px;
+  font-family: verdana;
+  margin-left: 50px;
+  
 }
 
 .messageID{
-    color: black; 
+  color: black;
 }
 
 /* end of chat page style */ 
