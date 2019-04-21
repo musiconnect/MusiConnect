@@ -4,6 +4,7 @@ import SendMessage from '../chatStuff/SendMessage'
 import NewRoom from '../chatStuff/NewRoom'
 import RoomList from '../chatStuff/RoomList'
 import Chatkit from '@pusher/chatkit-client' // the Chatkit
+  
 
 class ChatPage extends Component {
     
@@ -13,26 +14,51 @@ constructor(){
             messages:[], // creating an array to store the messages
             joinableRooms: [], // an array to store the joinable rooms
             joinedRooms: [], // an array to the rooms joined
-            roomId : null
+            roomId : ""
+    
         }
+
         this.sendMessage = this.sendMessage.bind(this) // binding the current user so the method sendMessage can use it 
         this.subscribeToRoom = this.subscribeToRoom.bind(this)
     
         this.getRooms = this.getRooms.bind(this)
         
         this.createRoom = this.createRoom.bind(this)
+    
+       // this.createUser =
+        //this.createUser.bind(this)
     }
    
 componentDidMount(){  
+   <div>
+    <script src = "script.js"></script>
+    </div>
    
        const tokenProvider = new Chatkit.TokenProvider({
            url: "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/eb7f4a94-a90b-450c-8e15-144ac87018b2/token" //is a token that will be useful in the chat manager that will interact with Chatkit 
        });
-        
+   
+    const hatkit = require('@pusher/chatkit-server')
+    const chatkit = new hatkit.default({
+  instanceLocator: "v1:us1:eb7f4a94-a90b-450c-8e15-144ac87018b2",
+  key: "e79d4f6c-5834-41f7-bb89-58cb70abd1e0:9m+Ee5nNCNveC2uH3zXwIkz2h/nnZXDjIKPaKb7cJYE=",
+})
+    chatkit.createUser({
+    id: profile.getEmail(),
+    name: profile.getEmail(),
+    })
+   .then(() => {
+    console.log('User created successfully');
+  }).catch((err) => {
+    console.log(err);
+  });
+  
+       // var pleaseGod = profile.getEmail();
+    //    this.createUser(pleaseGod)
        const chatManager = new Chatkit.ChatManager({
-            
-        instanceLocator:"v1:us1:eb7f4a94-a90b-450c-8e15-144ac87018b2", //this is the particular instance of the Chatkit
-        userId: "test3", // a userId 
+     instanceLocator:"v1:us1:eb7f4a94-a90b-450c-8e15-144ac87018b2", //this is the particular instance of the Chatkit
+        userId: profile.getEmail(), // a userId 
+           
         tokenProvider: tokenProvider //this is setting very basic information for the Chatkit to use later 
         });
         
@@ -46,6 +72,7 @@ componentDidMount(){
         
  })}; // called before render method, needed to establish connections
     
+
 
 getRooms(){
      this.currentUser.getJoinableRooms() // getting the joinable rooms
@@ -96,13 +123,31 @@ createRoom(name){
     .catch(err => console.log("problem making new room: ", err))
     
 }   // creates a room  
-
+/*
+createUser(text){
+       const Chatkit = require('@pusher/chatkit-server')
+    const chatkit = new Chatkit.default({
+  instanceLocator: "v1:us1:eb7f4a94-a90b-450c-8e15-144ac87018b2",
+  key: "e79d4f6c-5834-41f7-bb89-58cb70abd1e0:9m+Ee5nNCNveC2uH3zXwIkz2h/nnZXDjIKPaKb7cJYE=",
+})
+    chatkit.createUser({
+    id: text,
+    
+    })
+   .then(() => {
+    console.log('User created successfully');
+  }).catch((err) => {
+    console.log(err);
+  });
+    
+}
+*/
     
   render() {
       
     return (
       <div class="row">
-
+        
         <div class="column side">
         <h2>Your Rooms:</h2>
            <RoomList roomID = {this.state.roomId}
@@ -122,6 +167,8 @@ createRoom(name){
 
         <div class="column side">
         <NewRoom  createRoom = {this.createRoom}/> {/* option to create a new room? not sure if necesary yet */}
+      
+
         </div>
 
       </div>

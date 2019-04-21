@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
         <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <head>
         <title>MusiConnect</title>
-        <meta name="google-signin-client_id" content="75840090894-216g5phvlrt5vcu753q5le3lgmus77qp.apps.googleusercontent.com"/>
+        <meta name="google-signin-client_id" content="75840090894-4bnjr744u1sjgc5g6mod06rno66cf8kc.apps.googleusercontent.com"/>
+       <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="script.js"></script>
+         
         
-        <div>
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+       
             <div id="app"></div>
-        </div>
+            
+        
   </head>
 
   <script type="text/javascript" src="bundle.js"></script>
 
     <body>
-            <script src="https://apis.google.com/js/platform.js" async defer></script>
-            <script src="htpps://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="script.js"></script>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <div class="data">
+                <br/><br/><br/><br/>
+                <p>Profile Details</p>
+                <img id = "pic" class = "img-circle" width ="100" height = "100" />
+                <p>Email: </p>
+                <p id = "email" class = "alert alert-danger">
+                </p>
+                <button onClick = "signOut()" class = "btn btn-danger">Sign Out</button>
+            </div>
+            
+            
         
     </body>
 

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/musiconnect/MusiConnect#readme",
   "dependencies": {
     "@pusher/chatkit-client": "^1.4.1",
+    "@pusher/chatkit-server": "^1.1.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",

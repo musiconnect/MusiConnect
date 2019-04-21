@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 
+
 class MessageList extends Component {
  
 componentWillUpdate(){
@@ -33,7 +34,7 @@ render() {
                     
                      <div className = "messageID">{message.senderId}:</div> {/* the id */}
                      <div className = "message"> {message.parts[0].payload.content}</div> {/* the message */}
-                 
+                      <div className = "messageTime"> {message.createdAt}</div> {/* the message time */}
                     </div>
                    
                 )

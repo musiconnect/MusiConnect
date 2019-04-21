@@ -2,11 +2,19 @@ const path = require('path');
 const SRC_DIR = path.join(__dirname, '/react-client/src');
 const DIST_DIR = path.join(__dirname, '/react-client/dist');
 const webpack = require('webpack');
+
+ 
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`,
-  output: {
+  
+    output: {
     path: DIST_DIR,
     filename: 'bundle.js',
+  },
+    node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.css']
@@ -35,6 +43,7 @@ module.exports = {
       }
     ]
   },
+    
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
