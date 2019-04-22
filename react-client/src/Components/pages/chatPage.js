@@ -23,7 +23,7 @@ constructor(){
         this.subscribeToRoom = this.subscribeToRoom.bind(this)
     
         this.getRooms = this.getRooms.bind(this)
-        
+        this.removeRoom = this.removeRoom.bind(this)
         this.createRoom = this.createRoom.bind(this)
     
        // this.createUser =
@@ -127,6 +127,16 @@ createRoom(name){
     .catch(err => console.log("problem making new room: ", err))
     
 }   // creates a room  
+
+removeRoom(){
+    this.currentUser.leaveRoom({
+        roomId: this.state.roomId
+    })
+    this.setState({
+        roomId : "",
+    })
+    this.getRooms()
+}
 /*
 createUser(text){
        const Chatkit = require('@pusher/chatkit-server')
@@ -162,6 +172,8 @@ createUser(text){
                     subscribeToRoom={this.subscribeToRoom} rooms={[...this.state.joinableRooms]} />  {/* calling a list of availbable rooms */}
                 <h2>Add New Room:</h2>
                     <NewRoom  createRoom = {this.createRoom}/> {/* option to create a new room? not sure if necesary yet */}
+                <h3>Remove Room</h3>
+                    <button type = "button" onClick ={this.removeRoom}>-</button> 
             </div>
         </div>
 
