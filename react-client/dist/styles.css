@@ -72,7 +72,7 @@ body {
   text-decoration: none;
 }
 .topnav a:active {
-  background-color: #ddd;
+  background-color: rgb(54, 54, 54);
   color: black;
   text-decoration: none;
 }
@@ -108,23 +108,27 @@ body {
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {
-  margin-top: 100px;
+  margin-top: 90px;
   float: left;
   width: 20%;
+  overflow-y: auto;
+  height: 750px;
 }
 
 /* Right column */
 .rightcolumn {
-  margin-top: 100px;
+  margin-top: 90px;
   float: left;
   width: 60%;
   padding-left: 20px;
+  overflow-y: auto;
+  height: 750px;
 }
 
 /* Add a card effect for articles */
 .card {
-  padding: 20px;
-  margin-top: 20px;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 /* Clear floats after the columns */
@@ -217,7 +221,7 @@ body {
   border: 2px solid #333;
   border-radius: 25px;
   text-align: center;
-  color: white;
+  color: rgb(93, 184, 91);
 }
 
 .send-message{
@@ -231,24 +235,116 @@ body {
 
 .room-list{
   grid-area:r;
-  background-color: rgb(0, 69, 138); /* coloring to help see the component */
-  border: 2px solid #333;
+  color: black;
+  background-color: rgb(93, 184, 91); /* coloring to help see the component */
+  border: 2px solid rgb(65, 156, 63);
   border-radius: 25px;
   text-align: left;
-  text-decoration: none;
+  padding: 10px;
 }
-
-.room-list.ul{
-  text-decoration: none;
-  color: white;
-  background: pink
+.room{
+  list-style-type: none;
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  width: 100%;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
-
+.room:active{
+  background-color: rgb(70, 115, 129);
+  border: 2px solid rgb(70, 115, 129);
+  border-radius: 10px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.room:hover {
+  background-color: rgb(127, 181, 199);
+  border: 0px solid rgb(127, 181, 199);
+  border-radius: 10px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
 .roomactive {
   color: white;
+  background-color: rgb(127, 181, 199);
+  border: 2px solid rgb(127, 181, 199);
+  border-radius: 10px;
+  width: 100%;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.spacing {
+  padding: 4px;
+}
+.roomLinks {
+  color: white;
+}
+.roomLinks:hover{
+  color: black;
+  text-decoration: none;
+}
+.roomLinksactive{
+  color: black;
+  text-decoration: none;
+}
+.roomLinksactive:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.sendMessageBox {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(65, 156, 63);
+  border-radius: 4px;
+}
+.sendMessageBox:focus {
+  border: 3px solid #555;
+}
+
+.newRoomBox {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(65, 156, 63);
+  border-radius: 4px;
+}
+
+.newRoomBox:focus {
+  border: 3px solid #555;
+}
+
+.new-room button {
+  background-color: rgb(65, 156, 63);
+  color: white;
+  cursor: pointer;
+  padding: 2px;
 }
 
 .message {
+  background-color: rgb(199, 208, 211);
+  border: 1px solid rgb(169, 174, 179);
+  border-radius: 25px;
+  width: 60%;
+  text-align: right;
+  padding: 10px;
+  font-family: verdana;
+  margin-left: 50px;
+  position: relative;
+  right: -30%;
+}
+.messageactive {
   background-color: deepskyblue;
   border: 1px solid dodgerblue;
   border-radius: 25px;
@@ -256,12 +352,19 @@ body {
   text-align: left;
   padding: 10px;
   font-family: verdana;
-  margin-left: 50px;
-  
+  margin-left: 20px;
 }
 
 .messageID{
   color: black;
+  text-align: right;
+}
+.messageIDactive {
+  text-align: left;
+}
+
+.messageTime {
+  text-align: center;
 }
 
 /******************************************************************** Live Stream Page Style ********************************************************************/
@@ -311,6 +414,14 @@ footer {
   top: 100px;
   right: 10px;
 }
+.loginLabel {
+  background-color: rgb(93, 184, 91);
+  border: 1px solid rgb(65, 156, 63);
+  border-radius: 5px;
+  width: 50%;
+  color: white;
+  padding: 2px;
+}
 
 .img-circle {
   float: right;
@@ -338,25 +449,21 @@ footer {
     top: -60px;
   }
   .column {
-    top: 100px;
+    margin-top: 0px;
     margin-bottom: 300px;
   }
-  .column.side, .column.middle {
-    width: 100%;
+  .column.side {
+    width: 95%;
+  }
+  .column.middle {
+    width: 95%;
+    margin-top: -250px;
   }
   .g-signin2 {
     position: relative;
     top: -335px;
     right: 10px
   }
-  .chatColumn {
-    top: -80px;
-    margin-bottom: 100px;
-  }
-  .chatColumn.side, .chatColumn.middle {
-    width: 100%;
-  }
-
   .logoutInfo {
     position: absolute;
     width: 95%;
@@ -364,5 +471,17 @@ footer {
     right: 5px;
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .leftcolumn {
+    margin-top: 180px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 200px;
+  }
+  .rightcolumn {
+    margin-top: -200px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 60px;
   }
 }

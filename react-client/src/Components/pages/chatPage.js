@@ -14,7 +14,8 @@ constructor(){
             messages:[], // creating an array to store the messages
             joinableRooms: [], // an array to store the joinable rooms
             joinedRooms: [], // an array to the rooms joined
-            roomId : ""
+            roomId : "",
+            gprofile: ""
     
         }
 
@@ -51,6 +52,9 @@ componentDidMount(){
     console.log('User created successfully');
   }).catch((err) => {
     console.log(err);
+  });
+  this.setState({
+      gprofile : profile.getEmail() 
   });
   
        // var pleaseGod = profile.getEmail();
@@ -95,7 +99,7 @@ subscribeToRoom(roomId){
                     messages: [...this.state.messages, message] //creates new array with new message, don't want to modify state, need to create new state with set state
                     })
                 }},
-               messageLimit:5 // a limit of 5 messages will appear 
+               messageLimit: 20 // a limit of 5 messages will appear 
             })
             .then(room => {
              this.setState({
@@ -152,8 +156,11 @@ createUser(text){
             <div class="card">
                 <h2>Your Rooms:</h2>
                     <RoomList roomID = {this.state.roomId}
-                    subscribeToRoom={this.subscribeToRoom} rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} />  {/* calling a list of availbable rooms */} 
-
+                    subscribeToRoom={this.subscribeToRoom} rooms={[...this.state.joinedRooms]} />  {/* calling a list of availbable rooms */} 
+                <h2>Joinable Room:</h2>
+                    <RoomList roomID = {this.state.roomId}
+                    subscribeToRoom={this.subscribeToRoom} rooms={[...this.state.joinableRooms]} />  {/* calling a list of availbable rooms */}
+                <h2>Add New Room:</h2>
                     <NewRoom  createRoom = {this.createRoom}/> {/* option to create a new room? not sure if necesary yet */}
             </div>
         </div>
@@ -163,10 +170,12 @@ createUser(text){
                 <h2>Chat Page</h2>
                     <MessageList
                     roomId = {this.state.roomId}
-                    messages ={this.state.messages} />  {/* calling messages sending the messages */} 
+                    messages ={this.state.messages} 
+                    profile ={this.state.gprofile}
+                    />  {/* calling messages sending the messages */} 
             
                     <SendMessage 
-                    disabled={!this.state.roomId === null}
+                    disabled={this.state.roomId === ""}
                     sendMessage={this.sendMessage} />  {/* optioin to send a message, sending the send message function */} 
             </div>
         </div>

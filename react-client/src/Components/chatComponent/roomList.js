@@ -7,11 +7,11 @@ class RoomList extends Component {
     console.log(this.props.rooms)
     return (
        <div className= "room-list">
-        <ul> 
+        <ul className="spacing"> 
         {orderRooms.map(room => {
         const active = this.props.roomID === room.id ? "active" : ""; return(
             <li key={room.id} className = {"room" + active}>
-                <a onClick={() =>this.props.subscribeToRoom(room.id) } href = "#/chatPage"> {room.name}</a> 
+                <a onClick={() =>this.props.subscribeToRoom(room.id) } href = "#/chatpage" className = {"roomLinks"+active}> {room.name}</a> 
             </li>
         )})}
         </ul>

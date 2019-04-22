@@ -31,15 +31,15 @@ class NewRoom extends Component {
     return (
        <div className= "new-room">
         <form onSubmit = {this.handleSubmit}>
-            <input 
+            <input className="newRoomBox"
                 value = {this.state.roomName}
                 onChange = {this.handleChange}
                 type = "text"
                 placeholder="New Room"
                 required />
-            <button id="new-room-button" type ="submit">+</button>
+            <button class="new-room-button">ADD ROOM</button>
         </form>
-        <br/><br/><br/><br/>
+        <br></br>
        </div>
     )
   }
