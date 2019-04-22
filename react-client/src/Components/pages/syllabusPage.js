@@ -11,13 +11,7 @@ class SyllabusPage extends Component {
         </div>
 
         <div class="column middle">
-          <h1>Syllabus Page</h1>
-          <h3>Here you will be able to access the choir departments syllabus</h3>
-        </div>
-
-        <div class="column side">
-          <h2>Right Side Content</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+          <iframe width="100%" height="700" id="liveHtml" src="../Syllabus.pdf"></iframe>
         </div>
 
       </div>

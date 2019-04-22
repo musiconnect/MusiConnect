@@ -1,10 +1,15 @@
-/***************** Basic layout Styles *****************/
+
+/******************************************************************** Basic layout Styles ********************************************************************/
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  margin: 100;
+  background-image: url("./images/light-gray-background.jpg");
+  background-size: 1700px 1080px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .centerAlign {
@@ -15,15 +20,10 @@ body {
   width: 50%;
 }
 
-.homeLogo {
-  width: 50px;
-  height: auto;
-}
-
-/***************** Main Heading Style *****************/
+/******************************************************************** Main Heading Style ********************************************************************/
 .header {
   display: block;
-  background-color: grey;
+  background-image: url("./images/logoBackground.jpg");
   width: 100%;
   height: 60px;
   position: fixed;
@@ -41,7 +41,7 @@ body {
 
 
 
-/***************** Style the top navigation bar *****************/
+/******************************************************************** Style the top navigation bar ********************************************************************/
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -69,22 +69,29 @@ body {
 .topnav a:hover {
   background-color: #ddd;
   color: black;
+  text-decoration: none;
+}
+.topnav a:active {
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
 }
 
-/***************** Seperating screen into 3 sections *****************/
+/******************************************************************** Seperating screen into 3 sections ********************************************************************/
 .column {
   float: Left;
   padding: 5px;
   position: relative;
   top: 120px;
   font-family: verdana;
-  bottom: 1000px;
+  margin-bottom: 200px;
 }
 .column.side{
   width: 20%;
   border: 2px;
   border-radius: 2px;
   border-color: grey;
+  
 }
 .column.middle{
   width: 60%;
@@ -96,62 +103,89 @@ body {
   clear: both;
 }
 
-/*Changes layout depending on site size*/
-@media screen and (max-width: 700px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
-  .topnav a {float: none;}
-  .column {
-    top: 350px;
-  }
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
 }
 
-/***************** Footer Style *****************/
-footer {
-  display: block;
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.chatRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/******************************************************************** Home Page Style ********************************************************************/
+.homeLogo {
+  align-items: center;
+}
+
+.homeLogo img {
   width: 100%;
-  height: 60px;
-  background-color: #333;
-  color: white;
-  position: fixed;
-  bottom: 0px;
-  text-align: center;
+  height: auto;
 }
 
-.footer img {
-  width: 50px;
+.list-style {
+  color: rgb(61, 62, 77);
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  line-height: 60px;
+  font-size: 25px;
+}
+
+.list-style li {
+  list-style-type: none;
+  text-align: left;
+}
+.list-style img {
+  width: 30px;
   height: auto;
   margin: 5px;
   
 }
-.footer p {
-  font-family: verdana;
-}
-/***************** Sign In Button Styles *****************/
-.g-signin2{
-  float:right;
-  padding: 55px 0px;
-  position: fixed;
-  right: 5px;
-  z-index: 3;
-  top: 12px;
+
+.box {
+  margin-top: 5px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 5px;
+  width: 80%;
+
 }
 
-/***************** Calendar Page Body Style *****************/
+
+/******************************************************************** Calendar Page Style ********************************************************************/
 .pageBody{
   top:60px;
 	position:relative;
 }
 
-
-/***************** Chat Page Body Style *****************/
+/******************************************************************** Chat Page Style********************************************************************/
 .pageBody{
   top: 60px;
   position: relative;
+  overflow: scroll;
 }
 
 .chatapp{
+  overflow: scroll;
   display: grid; /* this creates a grid for each component of the chat app to be placed, pretty cool */
   height: 100%;
   width: 100%;
@@ -172,11 +206,16 @@ footer {
   border: 2px solid #333;
   border-radius: 50px;
   padding: 20px;
+  overflow: scroll;
 }
 
 .new-room{
   grid-area: s;
-  background-color: red;
+  background-color: rgb(0, 69, 138); /* coloring to help see the component */
+  border: 2px solid #333;
+  border-radius: 25px;
+  text-align: center;
+  color: white;
 }
 
 .send-message{
@@ -190,7 +229,21 @@ footer {
 
 .room-list{
   grid-area:r;
-  background-color: yellow;
+  background-color: rgb(0, 69, 138); /* coloring to help see the component */
+  border: 2px solid #333;
+  border-radius: 25px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.room-list.ul{
+  text-decoration: none;
+  color: white;
+  background: pink
+}
+
+.roomactive {
+  color: white;
 }
 
 .message {
@@ -209,42 +262,103 @@ footer {
   color: black;
 }
 
+/******************************************************************** Live Stream Page Style ********************************************************************/
+
+
+/******************************************************************** Syllabus Page Style ********************************************************************/
+
+
+/******************************************************************** Video Page Style ********************************************************************/
 
 
 
-/*
-NavBar Styles
-ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 5px;
-  position: fixed;
+/******************************************************************** Footer Style ********************************************************************/
+footer {
+  display: block;
   width: 100%;
-  top: 3px;
-  z-index: 3;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
 }
-li {
-  float: right;
-  border-right:1px solid black;
+
+.footer img {
+  width: 50px;
+  height: auto;
+  margin: 5px;
+  
+}
+.footer p {
   font-family: verdana;
 }
-li:last-child {
-  border-left: none;
+/******************************************************************** Sign In Button Styles ********************************************************************/
+.g-signin2 {
+  float:right;
+  padding: 55px 0px;
+  position: fixed;
+  right: 15px;
+  z-index: 3;
+  top: 15px;
 }
-li a {
-  display: block;
-  padding: 8px;
-  background-color: grey;
-  text-decoration: none;
+
+.logoutInfo {
+  position: absolute;
+  width: 18%;
+  top: 100px;
+  right: 10px;
 }
-li a:link {
-  color: white;
+
+.img-circle {
+  float: right;
+  position: relative;
+  top: -80px;
 }
-li a:hover {
-  color: darkgrey;
-  background-color: grey;
+
+.btn-success {
+  float: right;
 }
-li a:visited {
-color: white
+
+
+/*************************************************************************************************************************************************************/
+/******************************************************************** Adjustment to Scale ********************************************************************/
+/*************************************************************************************************************************************************************/
+@media screen and (max-width: 1020px) {
+  .topnav a {
+    float: none;
+  }
+  .header {
+    position: relative;
+  }
+  .topnav {
+    position: relative;
+    top: -60px;
+  }
+  .column {
+    top: 100px;
+    margin-bottom: 300px;
+  }
+  .column.side, .column.middle {
+    width: 100%;
+  }
+  .g-signin2 {
+    position: relative;
+    top: -335px;
+    right: 10px
+  }
+  .chatColumn {
+    top: -80px;
+    margin-bottom: 100px;
+  }
+  .chatColumn.side, .chatColumn.middle {
+    width: 100%;
+  }
+
+  .logoutInfo {
+    position: absolute;
+    width: 100%;
+    top: 350px;
+    right: 5px;
+  }
 }
-*/

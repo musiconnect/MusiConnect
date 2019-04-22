@@ -15,10 +15,6 @@ class VideoPage extends Component {
           <h3>Here you will be able to access the choir departments videos all in one place!</h3>
         </div>
 
-        <div class="column side">
-          <h2>Right Side Content</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-        </div>
 
       </div>
     )

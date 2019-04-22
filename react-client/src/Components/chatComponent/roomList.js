@@ -3,10 +3,18 @@ import React, { Component } from 'react';
 
 class RoomList extends Component {
   render() {
+      const orderRooms = [...this.props.rooms].sort((a,b)=> a.id - b.id)
+    console.log(this.props.rooms)
     return (
        <div className= "room-list">
-        <br/><br/><br/><br/>
-            Room List
+        <ul> 
+        {orderRooms.map(room => {
+        const active = this.props.roomID === room.id ? "active" : ""; return(
+            <li key={room.id} className = {"room" + active}>
+                <a onClick={() =>this.props.subscribeToRoom(room.id) } href = "#/chatPage"> {room.name}</a> 
+            </li>
+        )})}
+        </ul>
        </div>
     )
   }

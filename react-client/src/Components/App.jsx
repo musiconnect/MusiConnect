@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { HashRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 import { browserHistory } from 'react-router';
 import Header from './headerComponent/header';
 import NavBar from './HeaderComponent/NavBar';
@@ -20,12 +20,15 @@ class App extends Component {
             <div>
                 <Header />
                 <NavBar />
+                <Switch>
                   <Route name="home" path="/homePage/" component={HomePage} />
                   <Route name="calendar" path="/calendarPage/" component={CalendarPage} />
                   <Route name="chat" path="/chatPage/" component={ChatPage} />
                   <Route name="videos" path="/videoPage/" component={VideoPage} />
                   <Route name="livestream" path="/liveStreamPage/" component={LiveStreamPage} />
                   <Route name="Syllabus" path="/syllabusPage" component={SyllabusPage} />
+                  <Redirect exact from='/' to='/homePage' />
+                </Switch>
                 <Footer />
             </div>
         </div>
