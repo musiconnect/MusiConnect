@@ -80,11 +80,13 @@ body {
 /******************************************************************** Seperating screen into 3 sections ********************************************************************/
 .column {
   float: Left;
-  padding: 5px;
+  padding: 10px;
   position: relative;
   top: 120px;
   font-family: verdana;
   margin-bottom: 200px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .column.side{
   width: 20%;
@@ -114,13 +116,11 @@ body {
 .rightcolumn {
   float: left;
   width: 25%;
-  background-color: #f1f1f1;
   padding-left: 20px;
 }
 
 /* Add a card effect for articles */
 .card {
-  background-color: white;
   padding: 20px;
   margin-top: 20px;
 }
@@ -305,7 +305,7 @@ footer {
 
 .logoutInfo {
   position: absolute;
-  width: 18%;
+  width: 15%;
   top: 100px;
   right: 10px;
 }
@@ -357,8 +357,10 @@ footer {
 
   .logoutInfo {
     position: absolute;
-    width: 100%;
+    width: 95%;
     top: 350px;
     right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }

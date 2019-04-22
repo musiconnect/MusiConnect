@@ -21,8 +21,8 @@ class HomePage extends Component {
 
               <div class="box">
                 <li>Daniel  Loftus</li>
-                <a href="https://www.instagram.com"><img src="../images/InstaLogo.png" alt="InstaGram Logo"/></a>
-                    <a href="https://www.twitter.com"><img src="../images/TwitterLogo.png" alt="Twitter Logo"/></a>
+                <a href="https://www.instagram.com/daniel_loftus34/"><img src="../images/InstaLogo.png" alt="InstaGram Logo"/></a>
+                    <a href="https://twitter.com/DanielCLoftus"><img src="../images/TwitterLogo.png" alt="Twitter Logo"/></a>
               </div>
 
               <div class="box">
