@@ -6,10 +6,11 @@
 
 body {
   margin: 100;
-  background-image: url("./images/light-gray-background.jpg");
-  background-size: 1700px 1080px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background: url("./images/light-gray-background.jpg") no-repeat center center fixed;
+  -webkit-backdrop-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
 }
 
 .centerAlign {
