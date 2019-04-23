@@ -172,8 +172,10 @@ createUser(text){
                     subscribeToRoom={this.subscribeToRoom} rooms={[...this.state.joinableRooms]} />  {/* calling a list of availbable rooms */}
                 <h2>Add New Room:</h2>
                     <NewRoom  createRoom = {this.createRoom}/> {/* option to create a new room? not sure if necesary yet */}
-                <h3>Remove Room</h3>
-                    <button type = "button" onClick ={this.removeRoom}>-</button> 
+                <h2>Remove Room:</h2>
+                <div class="new-room">
+                    <button class="deleteButton" type = "button" onClick ={this.removeRoom}>Delete Current Room</button> 
+                </div>
             </div>
         </div>
 

@@ -38,9 +38,6 @@ body {
 }
 
 
-
-
-
 /******************************************************************** Style the top navigation bar ********************************************************************/
 .topnav {
   overflow: hidden;
@@ -330,6 +327,10 @@ body {
   color: white;
   cursor: pointer;
   padding: 2px;
+}
+
+.deleteButton {
+  width: 50%;
 }
 
 .message {
