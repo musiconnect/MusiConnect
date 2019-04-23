@@ -6,18 +6,18 @@ class CalenderPage extends Component {
       <div class="row">
 
         <div class="column side">
-          <h2>Left Side Content</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+          <div class="syllabusInfoBox">
+            <h2>Kent State Choir</h2>
+            <h1>Calendar</h1>
+            <br></br><br></br>
+            <h4>This calendar displays all of the past and upcoming events, recitals, and practices.</h4>
+            <br></br>
+          </div>
         </div>
 
 			  <div class="column middle">
-				  <iframe width="100%" height="700" src="https://calendar.google.com/calendar/b/3/embed?showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%232952A3&amp;src=4vvqdqcmu1nsgikae8250v453s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+				  <iframe src="https://calendar.google.com/calendar/b/3/embed?showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%232952A3&amp;src=4vvqdqcmu1nsgikae8250v453s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" width="1000" height="690" frameborder="0" scrolling="no"></iframe>
 			  </div>
-
-        <div class="column side">
-          
-        </div>
-      
       </div>
     )
   }

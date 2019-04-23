@@ -6,6 +6,7 @@ class HomePage extends Component {
       <div class="row">
 
         <div class="column side">
+        <div class="syllabusInfoBox">
           <h1>Site Creators</h1>
           <div class="list-style">
             <ul>
@@ -52,6 +53,7 @@ class HomePage extends Component {
 
 
             </ul>
+          </div>
           </div>
         </div>
 

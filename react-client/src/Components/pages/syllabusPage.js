@@ -6,8 +6,24 @@ class SyllabusPage extends Component {
       <div class="row">
 
         <div class="column side">
-          <h2>Left Side Content</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+          <h2>Bryon Black ll</h2>
+            <div class="syllabusImage">
+              <img src="../images/black.jpg" alt="Bryon Black"/>
+            </div>
+        <div class="syllabusInfoBox">
+          <h4>JOB TITLE</h4>
+            <p>Assistant Professor - Men's Chorus - KSU Gospel Choir</p>
+          <h4>JOB DEPARTMENT</h4>
+            <p>School of Music</p>
+          <h4>Campus</h4>
+            <p>Kent</p>
+          <h4>EMAIL</h4>
+            <p>bblack15@kent.edu</p>
+          <h4>PHONE</h4>
+            <p>330-672-4802</p>
+          <h4>OFFICE LOCATION</h4>
+            <p>C309 Center for the Performing Arts</p>
+        </div>
         </div>
 
         <div class="column middle">

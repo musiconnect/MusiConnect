@@ -79,7 +79,7 @@ body {
   float: Left;
   padding: 10px;
   position: relative;
-  top: 120px;
+  top: 150px;
   font-family: verdana;
   margin-bottom: 200px;
   margin-left: 15px;
@@ -372,7 +372,16 @@ body {
 
 
 /******************************************************************** Syllabus Page Style ********************************************************************/
+.syllabusImage img{
+  width: 100%;
+  height: auto;
+}
 
+.syllabusInfoBox {
+  background-color: lightBlue;
+  text-align: center;
+  padding: 5px;
+}
 
 /******************************************************************** Video Page Style ********************************************************************/
 

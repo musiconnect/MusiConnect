@@ -33,7 +33,12 @@ constructor(){
 componentDidMount(){  
    <div>
     <script src = "script.js"></script>
+
     </div>
+    if(profile == null || profile.getEmail().toString().search("@kent.edu") == -1){
+        alert("Sign in with a Kent state email")
+        window.location.replace("http://localhost:8080");
+    }
    
        const tokenProvider = new Chatkit.TokenProvider({
            url: "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/eb7f4a94-a90b-450c-8e15-144ac87018b2/token" //is a token that will be useful in the chat manager that will interact with Chatkit 
