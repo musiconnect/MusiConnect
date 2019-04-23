@@ -19,7 +19,7 @@ class VideoPage extends Component {
 
         <div class="column middle">
           <h1>Video Page</h1>
-          <h3>Here you will be able to access the choir departments videos all in one place!</h3>
+            <iframe width="100%" height="640" id="ytHtml" src="../yt-search.html"></iframe>
         </div>
 
 
